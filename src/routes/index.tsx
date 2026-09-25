@@ -73,7 +73,7 @@ const projects = [
 ];
 const contactLinks = [
   { label: "nalynsapiot@gmail.com", shortLabel: "Email", icon: Mail, href: "mailto:nalynsapiot@gmail.com" },
-  { label: "Facebook", shortLabel: "Facebook", icon: Facebook, href: "https://www.facebook.com/" },
+  { label: "Facebook", shortLabel: "Facebook", icon: Facebook, href: "https://www.facebook.com/share/1FB5SCVcMj/?mibextid=wwXIfr" },
   { label: "GitHub", shortLabel: "GitHub", icon: Github, href: "#contact" },
   { label: "LinkedIn", shortLabel: "LinkedIn", icon: Linkedin, href: "#contact" },
 ];
