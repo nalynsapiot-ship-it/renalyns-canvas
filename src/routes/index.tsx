@@ -72,10 +72,10 @@ const projects = [
   },
 ];
 const contactLinks = [
-  { label: "Email", icon: Mail },
-  { label: "Facebook", icon: Facebook },
-  { label: "GitHub", icon: Github },
-  { label: "LinkedIn", icon: Linkedin },
+  { label: "nalynsapiot@gmail.com", shortLabel: "Email", icon: Mail, href: "mailto:nalynsapiot@gmail.com" },
+  { label: "Facebook", shortLabel: "Facebook", icon: Facebook, href: "https://www.facebook.com/" },
+  { label: "GitHub", shortLabel: "GitHub", icon: Github, href: "#contact" },
+  { label: "LinkedIn", shortLabel: "LinkedIn", icon: Linkedin, href: "#contact" },
 ];
 
 function Portfolio() {
@@ -179,8 +179,8 @@ function Portfolio() {
           <div className="mx-auto max-w-[1320px]">
             <div className="reveal grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
               <div><p className="section-label">03 / Contact</p><h2 className="mt-4 font-display text-5xl font-extrabold md:text-7xl">Let&apos;s<br />Connect<span className="text-primary">.</span></h2><p className="mt-7 max-w-lg text-lg leading-8 text-muted-foreground">I am currently looking for internship opportunities and entry-level roles where I can grow as a developer and contribute to meaningful projects.</p>
-                <div className="mt-10 grid grid-cols-2 gap-3">{contactLinks.map(({ label, icon: Icon }) => <a key={label} href={label === "Email" ? "#contact-form" : "#contact"} className="contact-link"><Icon size={19} /><span>{label}</span><ExternalLink className="ml-auto opacity-40" size={14} /></a>)}</div>
-                <p className="mt-5 text-xs leading-5 text-muted-foreground">Social links are ready for Renalyn&apos;s profile URLs.</p>
+                <div className="mt-10 grid gap-3 sm:grid-cols-2">{contactLinks.map(({ label, shortLabel, icon: Icon, href }) => <a key={shortLabel} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="contact-link"><Icon size={19} /><span className="min-w-0 truncate">{label}</span><ExternalLink className="ml-auto shrink-0 opacity-40" size={14} /></a>)}</div>
+                <p className="mt-5 text-xs leading-5 text-muted-foreground">GitHub and LinkedIn links are ready for Renalyn&apos;s profile URLs.</p>
               </div>
               <form id="contact-form" onSubmit={submitForm} className="glass-form rounded-lg p-6 md:p-9"><div className="grid gap-6 sm:grid-cols-2"><label className="field-label">Name<input required name="name" autoComplete="name" placeholder="Your name" className="field" /></label><label className="field-label">Email<input required type="email" name="email" autoComplete="email" placeholder="you@example.com" className="field" /></label></div><label className="field-label mt-6">Message<textarea required name="message" rows={6} placeholder="Tell me about the opportunity or project..." className="field resize-none" /></label><button className="btn-primary mt-7 w-full sm:w-auto" type="submit">{sent ? <><Check size={17} /> Message ready</> : <><Send size={17} /> Send Message</>}</button>{sent && <p role="status" className="mt-4 text-sm text-primary">Thanks — your message has been captured in this preview.</p>}</form>
             </div>
