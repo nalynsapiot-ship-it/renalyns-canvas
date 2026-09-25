@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
-import portrait from "../assets/renalyn-portrait.jpg";
+import portraitAsset from "../assets/renalyn-photo.jpg.asset.json";
 import thriftImage from "../assets/project-thrift.jpg";
 import parkingImage from "../assets/project-parking.jpg";
 import hourHubImage from "../assets/project-hourhub.jpg";
@@ -136,7 +136,7 @@ function Portfolio() {
               <h1 className="hero-name hero-name-top absolute inset-x-0 top-8 z-10 text-center font-display font-extrabold uppercase">Renalyn</h1>
               <div className="portrait-wrap absolute left-1/2 top-[98px] z-20 -translate-x-1/2 md:top-[120px]">
                 <div className="portrait-ring" />
-                <img src={portrait} alt="Professional portrait representing Renalyn Gonzaga" width={1024} height={1280} fetchPriority="high" className="h-full w-full object-cover object-top" />
+                <img src={portraitAsset.url} alt="Portrait of Renalyn Gonzaga" width={1024} height={1280} fetchPriority="high" className="h-full w-full object-cover object-top" />
                 <span className="portrait-badge"><Code2 size={17} /> Building with purpose</span>
               </div>
               <h1 className="hero-name hero-name-bottom absolute inset-x-0 top-[300px] z-30 text-center font-display font-extrabold uppercase md:top-[380px]">Gonzaga</h1>
