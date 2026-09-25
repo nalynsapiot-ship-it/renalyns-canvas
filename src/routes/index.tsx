@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
-import portrait from "../assets/renalyn-portrait.jpg";
+import portraitAsset from "../assets/renalyn-photo.jpg.asset.json";
 import thriftImage from "../assets/project-thrift.jpg";
 import parkingImage from "../assets/project-parking.jpg";
 import hourHubImage from "../assets/project-hourhub.jpg";
