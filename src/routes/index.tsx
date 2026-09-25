@@ -73,7 +73,7 @@ const projects = [
 ];
 const contactLinks = [
   { label: "nalynsapiot@gmail.com", shortLabel: "Email", icon: Mail, href: "mailto:nalynsapiot@gmail.com" },
-  { label: "Facebook", shortLabel: "Facebook", icon: Facebook, href: "https://www.facebook.com/share/1FB5SCVcMj/?mibextid=wwXIfr" },
+  { label: "Renalyn Sapiot Gonzaga", shortLabel: "Facebook", icon: Facebook, href: "https://www.facebook.com/share/1FB5SCVcMj/?mibextid=wwXIfr" },
   { label: "GitHub", shortLabel: "GitHub", icon: Github, href: "#contact" },
   { label: "LinkedIn", shortLabel: "LinkedIn", icon: Linkedin, href: "#contact" },
 ];
@@ -136,7 +136,7 @@ function Portfolio() {
               <h1 className="hero-name hero-name-top absolute inset-x-0 top-8 z-10 text-center font-display font-extrabold uppercase">Renalyn</h1>
               <div className="portrait-wrap absolute left-1/2 top-[98px] z-20 -translate-x-1/2 md:top-[120px]">
                 <div className="portrait-ring" />
-                <img src={portraitAsset.url} alt="Portrait of Renalyn Gonzaga" width={1024} height={1280} fetchPriority="high" className="h-full w-full object-cover object-top" />
+                <img src={portraitAsset.url} alt="Portrait of Renalyn Gonzaga" width={828} height={791} fetchPriority="high" className="profile-photo" />
                 <span className="portrait-badge"><Code2 size={17} /> Building with purpose</span>
               </div>
               <h1 className="hero-name hero-name-bottom absolute inset-x-0 top-[300px] z-30 text-center font-display font-extrabold uppercase md:top-[380px]">Gonzaga</h1>
@@ -182,7 +182,7 @@ function Portfolio() {
                 <div className="mt-10 grid gap-3 sm:grid-cols-2">{contactLinks.map(({ label, shortLabel, icon: Icon, href }) => <a key={shortLabel} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="contact-link"><Icon size={19} /><span className="min-w-0 truncate">{label}</span><ExternalLink className="ml-auto shrink-0 opacity-40" size={14} /></a>)}</div>
                 <p className="mt-5 text-xs leading-5 text-muted-foreground">GitHub and LinkedIn links are ready for Renalyn&apos;s profile URLs.</p>
               </div>
-              <form id="contact-form" onSubmit={submitForm} className="glass-form rounded-lg p-6 md:p-9"><div className="grid gap-6 sm:grid-cols-2"><label className="field-label">Name<input required name="name" autoComplete="name" placeholder="Your name" className="field" /></label><label className="field-label">Email<input required type="email" name="email" autoComplete="email" placeholder="you@example.com" className="field" /></label></div><label className="field-label mt-6">Message<textarea required name="message" rows={6} placeholder="Tell me about the opportunity or project..." className="field resize-none" /></label><button className="btn-primary mt-7 w-full sm:w-auto" type="submit">{sent ? <><Check size={17} /> Message ready</> : <><Send size={17} /> Send Message</>}</button>{sent && <p role="status" className="mt-4 text-sm text-primary">Thanks — your message has been captured in this preview.</p>}</form>
+              <form id="contact-form" onSubmit={submitForm} className="glass-form rounded-lg p-6 md:p-9"><div className="mb-8 border-b border-border pb-5"><p className="font-display text-xl font-bold">Send me a message</p><a href="mailto:nalynsapiot@gmail.com" className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"><Mail size={15} /> nalynsapiot@gmail.com</a></div><div className="grid gap-6 sm:grid-cols-2"><label className="field-label">Name<input required name="name" autoComplete="name" placeholder="Your name" className="field" /></label><label className="field-label">Your Email<input required type="email" name="email" autoComplete="email" placeholder="you@example.com" className="field" /></label></div><label className="field-label mt-6">Message<textarea required name="message" rows={6} placeholder="Tell me about the opportunity or project..." className="field resize-none" /></label><button className="btn-primary mt-7 w-full sm:w-auto" type="submit">{sent ? <><Check size={17} /> Message ready</> : <><Send size={17} /> Send Message</>}</button>{sent && <p role="status" className="mt-4 text-sm text-primary">Thanks — your message has been captured in this preview.</p>}</form>
             </div>
           </div>
         </section>
